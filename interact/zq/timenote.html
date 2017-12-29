@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时光轴</title>
+	<link href="css/bootstrap-combined.min.css" rel="stylesheet">
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/timenote.css">
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+	<!-- <header>&nbsp;</header> -->
+
+
+		<div class="wrapTimeAll">
+		<!--功能块-->
+		<div class="left-side">
+			
+			<ul class="fnts">
+				<li><input type="button" value="返回首页" class="return"></li>
+				<li><a href="">添加时光</a></li>
+				<li><a href="">时光圈</a></li>
+				<li><a href="">我的时光轴</a></li>
+				<li><a href="">分享至朋友圈</a></li>
+			</ul>
+		</div>
+		<!--内容编辑-->
+		<div class="contentEdit">
+			 <div class="content container-fluid">
+			 	<p>编辑内容</p>
+                <div id='pad-wrapper'>
+                    <div id="editparent">
+                        <div id='editControls' class='span12' style='text-align:center; padding:5px;'>
+                            <div class='btn-group'>
+                                <a class='btn' data-role='undo' href='#'><i class='icon-undo'></i></a>
+                                <a class='btn' data-role='redo' href='#'><i class='icon-repeat'></i></a>
+                            </div>
+                            <div class='btn-group'>
+                                <a class='btn' data-role='bold' href='#'><b>Bold</b></a>
+                                <a class='btn' data-role='italic' href='#'><em>Italic</em></a>
+                                <a class='btn' data-role='underline' href='#'><u><b>U</b></u></a>
+                                <a class='btn' data-role='strikeThrough' href='#'><strike>abc</strike></a>
+                            </div>
+                            <div class='btn-group'>
+                                <a class='btn' data-role='justifyLeft' href='#'><i class='icon-align-left'></i></a>
+                                <a class='btn' data-role='justifyCenter' href='#'><i class='icon-align-center'></i></a>
+                                <a class='btn' data-role='justifyRight' href='#'><i class='icon-align-right'></i></a>
+                                <a class='btn' data-role='justifyFull' href='#'><i class='icon-align-justify'></i></a>
+                            </div>
+                            <div class='btn-group'>
+                                <a class='btn' data-role='indent' href='#'><i class='icon-indent-right'></i></a>
+                                <a class='btn' data-role='outdent' href='#'><i class='icon-indent-left'></i></a>
+                            </div>
+                            <div class='btn-group'>
+                                <a class='btn' data-role='insertUnorderedList' href='#'><i class='icon-list-ul'></i></a>
+                                <a class='btn' data-role='insertOrderedList' href='#'><i class='icon-list-ol'></i></a>
+                            </div>
+                            <div class='btn-group'>
+                                <a class='btn' data-role='h1' href='#'>h<sup>1</sup></a>
+                                <a class='btn' data-role='h2' href='#'>h<sup>2</sup></a>
+                                <a class='btn' data-role='p' href='#'>p</a>
+                            </div>
+                            <div class='btn-group'>
+                                <a class='btn' data-role='subscript' href='#'><i class='icon-subscript'></i></a>
+                                <a class='btn' data-role='superscript' href='#'><i class='icon-superscript'></i></a>
+                            </div>
+                        </div>
+                        <div id='editor' class='span12' style='' contenteditable>
+                            <h1>This is a title!</h1>
+                            <p>This is just some example text to start us off</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+		</div>
+		<!--右边-->
+		<div class="right-side">
+			<p>旧时光</p>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/edictor.js"></script>
+</html>

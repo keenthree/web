@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ZH">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style/square.css" />
+        <link rel="stylesheet" href="style/index.css" />
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style/login-register.css" />
+        <script src="js/login-register.js"></script>
+    </head>
+    <body class="container-fluid">
+        <!-- nav -->
+        <div class="row" id="nav">
+            <div class="col-md-1 col-md-offset-1">
+                <a href="#"><img src="" alt="logo"/></a>
+            </div>
+            <ul class="nav nav-tabs col-md-5">
+              <li role="presentation" class="col-md-3"><a href="index.html">首页</a></li>
+              <li role="presentation" class="col-md-3 active"><a href="#">广场</a></li>
+              <li role="presentation" class="col-md-3"><a href="#">添加时光</a></li>
+              <li role="presentation" class="col-md-3"><a href="#">我的</a></li>
+            </ul>
+            <div class="col-md-2">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">搜索&nbsp;<span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </div>
+            <div class="btn-group col-md-2" role="group" aria-label="...">
+                <button class="btn big-login" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Log in</button>
+                <button class="btn big-register" data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">Register</button>
+            </div>
+        </div>
+        <!-- 登录框 -->
+        <div class="modal fade login" id="loginModal">
+                  <div class="modal-dialog login animated">
+                      <div class="modal-content">
+                         <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Login with</h4>
+                        </div>
+                        <div class="modal-body">  
+                            <div class="box">
+                                 <div class="content">
+                                    <div class="social">
+                                        <a class="circle github" href="/auth/github">
+                                            <i class="fa fa-github fa-fw"></i>
+                                        </a>
+                                        <a id="google_login" class="circle google" href="/auth/google_oauth2">
+                                            <i class="fa fa-google-plus fa-fw"></i>
+                                        </a>
+                                        <a id="facebook_login" class="circle facebook" href="/auth/facebook">
+                                            <i class="fa fa-facebook fa-fw"></i>
+                                        </a>
+                                    </div>
+                                    <div class="division">
+                                        <div class="line l"></div>
+                                          <span>or</span>
+                                        <div class="line r"></div>
+                                    </div>
+                                    <div class="error"></div>
+                                    <div class="form loginBox">
+                                        <form method="post" action="/login" accept-charset="UTF-8">
+                                        <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                        <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                        <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
+                                        </form>
+                                    </div>
+                                 </div>
+                            </div>
+                            <div class="box">
+                                <div class="content registerBox" style="display:none;">
+                                 <div class="form">
+                                    <form method="post" html="{:multipart=>true}" data-remote="true" action="/register" accept-charset="UTF-8">
+                                    <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                    <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                    <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
+                                    <input class="btn btn-default btn-register" type="submit" value="Create account" name="commit">
+                                    </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="forgot login-footer">
+                                <span>Looking to 
+                                     <a href="javascript: showRegisterForm();">create an account</a>
+                                ?</span>
+                            </div>
+                            <div class="forgot register-footer" style="display:none">
+                                 <span>Already have an account?</span>
+                                 <a href="javascript: showLoginForm();">Login</a>
+                            </div>
+                        </div>        
+                      </div>
+                  </div>
+              </div>
+        <!-- 登录框 end -->
+    <!-- nav end -->
+
+        <div class="row">
+            <ul class="nav nav-tabs col-md-6 col-md-offset-1 square-ul">
+              <li role="presentation" class="active"><a href="#">早早教</a></li>
+              <li role="presentation"><a href="#">爹妈问</a></li>
+              <li role="presentation"><a href="#">时光圈</a></li>
+              <li role="presentation"><a href="#">晒晒娃</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary col-md-2 col-md-offset-2">我要发文</a>
+        </div>
+        <div class="page-header col-md-offset-1 col-md-10">
+            <p class="to-show">推荐关注</p>
+        </div>       
+        <div class="row">
+            <div class="jumbotron col-md-8 col-md-offset-1">
+              <div class="col-md-2">
+                  <a href="#" class="thumbnail">
+                    <img src="img/head_1.png" alt="">
+                    <p>儿童早教</p>
+                  </a>
+              </div>
+              <div class="col-md-2">
+                  <a href="#" class="thumbnail">
+                    <img src="img/head_2.png" alt="">
+                    <p>儿童教育专家</p>
+                  </a>
+              </div>
+              <div class="col-md-2">
+                  <a href="#" class="thumbnail">
+                    <img src="img/head_3.png" alt="">
+                    <p>儿童饮食</p>
+                  </a>
+              </div>
+              <div class="col-md-2">
+                  <a href="#" class="thumbnail">
+                    <img src="img/head_4.png" alt="">
+                    <p>兴趣培养</p>
+                  </a>
+              </div>
+              <div class="col-md-2">
+                  <a href="#" class="thumbnail">
+                    <img src="img/head_5.png" alt="">
+                    <p>儿童穿衣</p>
+                  </a>
+              </div>
+              <div class="col-md-2">
+                  <a href="#" class="thumbnail">
+                    <img src="img/head_6.png" alt="">
+                    <p>儿童口语表达</p>
+                  </a>
+              </div>
+              <div class="col-md-2">
+                  <a href="#" class="thumbnail">
+                    <img src="img/head_7.png" alt="">
+                    <p>儿童怪问</p>
+                  </a>
+              </div>
+              <div class="col-md-2">
+                  <a href="#" class="thumbnail">
+                    <img src="img/head_8.png" alt="">
+                    <p>儿童心理</p>
+                  </a>
+              </div>
+              <div class="col-md-2">
+                  <a href="#" class="thumbnail">
+                    <img src="img/head_9.png" alt="">
+                    <p>给孩子榜样</p>
+                  </a>
+              </div>
+              <div class="col-md-2">
+                  <a href="#" class="thumbnail">
+                    <img src="img/head_10.png" alt="">
+                    <p>儿童摄影</p>
+                  </a>
+              </div>
+            </div>
+            <div class="panel panel-default col-md-2">
+              <div class="panel-heading">热门排行榜</div>
+              <div class="panel-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">text1</li>
+                      <li class="list-group-item">text2</li>
+                      <li class="list-group-item">text3</li>
+                      <li class="list-group-item">text4</li>
+                      <li class="list-group-item">text5</li>
+                    </ul>
+              </div>
+            </div>
+        </div>
+        <div class="page-header col-md-offset-1 col-md-10">
+            <h3>晒晒娃</h3>
+        </div>
+        <div class="row">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </body>
+</html>

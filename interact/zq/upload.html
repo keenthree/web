@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/xuanxiangka.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<!-- <script type="text/javascript" src="js/update.js"></script> -->
+</head>
+<body>
+<!-- 个人信息-->
+	<div class="wrapAll">
+		<!---头像-->
+	<div id="head_img">
+	    <a class="file" onclick="imgFileClick()">
+	        <img id="head_imgurl" src="img/1.jpg">
+	        <span class="change_img_font"></span>
+	    </a>
+	    <input type="file" name="cover" id="change_img" onChange="changeImgFileUp(url1,url2)" ><!-- name要跟后台的名称一样，后台是cover，所有input[type=file]的name为cover -->
+	    <!-- <input type="hidden" id="cpath_1"/> -->
+		<input  id="cpath_1"/>
+	    <!-- 图片存放的本地路径 -->   
+	    <a id="upload_btn" href="javascript: saveHeadImg();" role="button">确认上传</a>     
+	</div>
+
+
+	<!-- 用户名 关注 粉丝-->
+	<div class="usermsg">
+		<p class="username"><a href="" >用户名</a></p>
+		<p><a href="" >关注</a><span>|</span><a href="" >粉丝</a></p>
+	</div>
+	<div class="clearflow"></div>
+	<!--信息动态-->
+	<hr>
+	<!--互动，关注，收藏，我的时光轴，发布 -->
+	<div id="lib_Tab1">
+		<div class="lib_Menubox lib_tabborder">
+			<ul>
+				<li class="tit_bj_left"></li>
+   				<li id="one1" onclick="setTab('one',1,5)" class="hover">
+   					<span>互动</span>
+   				</li>
+   				<li id="one2" onclick="setTab('one',2,5)" >
+   					<span>关注</span>
+   				</li>
+   				<li id="one3" onclick="setTab('one',3,5)">
+   					<span>收藏</span>
+   				</li>   
+   				<li id="one4" onclick="setTab('one',4,5)">
+   					<span>我的时光轴</span>
+   				</li> 
+   				<li id="one5" onclick="setTab('one',5,5)">
+   					<span>发布</span>
+   				</li> 
+			</ul>
+		</div>
+		<div class="lib_Contentbox lib_tabborder">  
+			<div id="con_one_1" class="text_div">
+				<a href="" target="_blank">互动内容互动内容互动内容互动内容互动内容互动内容互动内容互动内容互动内容互动内容</a>
+			</div>
+			<div id="con_one_2" class="text_div" style="display:none">
+				<a href="" target="_blank">关注内容关注内容关注内容关注内容关注内容关注内容关注内容关注内容</a>
+			</div>
+			<div id="con_one_3" class="text_div" style="display:none">
+				<a href="" target="_blank">收藏内容收藏内容收藏内容收藏内容收藏内容收藏内容收藏内容收藏内容</a>
+			</div>
+			<div id="con_one_4" class="text_div" style="display:none">
+				<a href="" target="_blank">我的时光轴我的时光轴我的时光轴我的时光轴我的时光轴我的时光轴</a>
+			</div>
+			<div id="con_one_5" class="text_div" style="display:none">
+				<a href="" target="_blank">发布</a>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+	<script type="text/javascript" src="js/ajaxfileupload.js"></script>
+	<script type="text/javascript" src="js/ftn.js"></script>
+</html>

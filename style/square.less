@@ -1,0 +1,98 @@
+@main-color: #FFAFCC;
+.square-ul {
+    li {
+        a {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+}
+.btn-primary {
+    background-color: @main-color;
+    border: 2px @main-color solid;
+}
+.btn-primary:hover {
+    background-color: #fff;
+    color: @main-color;
+    border: 2px @main-color solid;
+}
+.to-show {
+     font-size: 20px;
+}
+.jumbotron {
+    padding-right: 40px;
+    margin-right: 20px;
+}
+.panel-heading {
+    text-align: center;
+}
+.jumbotron .thumbnail {
+    p {
+        font-size: 16px;
+        text-align: center;
+    }
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
+    border-color: @main-color;
+    color: @main-color;
+    text-decoration: none;
+}
+.btn-primary:active:hover {
+    border-color: @main-color;
+    color: @main-color;
+    background-color: #fff;
+}
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active {
+    border-color: @main-color;
+    background-color: @main-color;
+    color: #fff;
+}
+.upflow {
+  transition: all .3s ease;
+}
+.upflow:hover {
+			transform: translateY(-6px);
+		    -webkit-transform: translateY(-6px);
+		    -moz-transform: translateY(-6px);
+		    box-shadow: 0 26px 40px -24px rgba(0,36,100,.5);
+		    -webkit-box-shadow: 0 26px 40px -24px rgba(0,36,100,.5);
+		    -moz-box-shadow: 0 26px 40px -24px rgba(0,36,100,.5);
+		}
+
+.left-right:hover {
+  animation-name: tran;
+   animation-duration: 0.6s;
+   animation-timing-function: ease-out;
+}
+@keyframes tran {
+    0% {transform: translate(10px)}
+    5% {transform: translate(20px)}
+    10% {transform: translate(25px)}
+    15% {transform: translate(20px)}
+    20% {transform: translate(10px)}
+    25% {transform: translate(0px)}
+    30% {transform: translate(-10px)}
+    35% {transform: translate(-20px)}
+    45% {transform: translate(-25px)}
+    50%{transform: translate(-20px)}
+    55%{transform: translate(-10px)}
+    60%{transform: translate(0px)}
+    65%{transform: translate(10px)}
+    75%{transform: translate(0px)}
+    80%{transform: translate(-10px)}
+    85%{transform: translate(0px)}
+    90%{transform: translate(10px)}
+    95%{transform: translate(-10px)}
+    100%{transform: translate(0px)}
+}
+.photo {
+  position: relative;
+
+  width: 100px;
+  height: 100px;
+  background: red;
+}

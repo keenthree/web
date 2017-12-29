@@ -1,0 +1,239 @@
+﻿/*公用样式*/
+html,body,p,ul,li,span,img,a{
+	margin: 0;
+	padding: 0;
+}
+.clearflow{
+	clear:both;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+ul,li{
+	list-style: none;
+}
+hr{
+	width: 80%;
+	margin:20px auto;
+}
+.wrapAll{
+	width: 100%;
+}
+
+/*头像*/
+#head_img{
+    float: left;
+    height: 190px;
+    width: 157px;
+}
+#head_img .file {
+    width: 100%;
+    height: 157px;  
+    position: relative;
+    display: inline-block;    
+    border-radius: 100%;
+    padding: 0;
+    margin-left: 100px;
+    /*overflow: hidden;*/
+    text-decoration: none;
+    line-height: 157px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+}
+#head_img .file img{
+    width: 100%;
+    height: 100%;   
+    color: #fff;
+}
+#head_img .change_img_font{
+    width: 100%;
+    height: 100%;   
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: inline-block;   
+    text-shadow: 1px 1px 0 rgba(221,68,73,0.8),-1px -1px 0 rgba(221,68,73,0.8);
+    border: 1px solid #fff;
+}
+#head_img .change_img_font:hover{
+     border-color: rgba(221,68,73,0.5);
+}
+#head_img .change_img_font:hover:after{
+    content: "更换头像";
+}
+#head_img input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+#change_img{
+    visibility: hidden;
+}
+#upload_btn, #cancel_btn{
+    border: 1px solid #ccc;
+    color: #848484;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+    margin-top: 3px;
+}
+
+
+/*用户名 关注，粉丝*/
+.ursemsg{
+	float: left;
+	left: 50px;
+}
+.usermsg p{
+	position: relative;
+	margin-left: 300px;
+}
+p.username{
+	padding-top:50px;
+	padding-left: 10px;
+}
+.usermsg span{
+
+}
+.usermsg a{
+	display: inline-block;
+	padding: 5px;
+	margin: 3px;
+}
+/*Tab1*/
+#lib_Tab1{
+	width:100%;
+	margin:0px;
+	padding:0px;
+	margin-bottom:15px;
+}
+/*Tab2*/
+/*#lib_Tab2{
+	width:100%;
+	margin:0px;
+	padding:0px;
+	margin-bottom:15px;
+}*/
+.lib_tabborder{
+}
+.lib_Menubox {
+	width: 100%;
+	height:40px;
+	line-height:40px;
+	background-image: url('../img/tit01_center.jpg');
+	background-repeat:repeat-x;
+	background-position: left top;
+	position:relative;
+	margin: 0 auto;
+}
+.lib_Menubox ul{
+	width:100%;
+	margin:0px;
+	padding:0px;
+	list-style:none; 
+	position:absolute; 
+	left:0; 
+	height:40px;
+	text-align:center;
+	background-image: url('../img/tit01_right.jpg');
+	background-repeat:no-repeat;
+	background-position: right top;
+}
+.lib_Menubox li{
+	float: left;
+	display: block;
+	cursor: pointer;
+	width: 18%;
+	color: #949694;
+	font-weight: bold;
+	margin-right: 2px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 10pt;
+	border-left-style: dotted;
+	border-left-width: 1px;
+	border-left-color: #B6B6B6;
+}
+.lib_tabborder li span{
+	width:100%;
+	height: 40px;
+	display:block;
+	line-height: 40px;
+	text-align:center;
+}
+li#one1,li.tit_bj_left{
+	border:none;
+}
+li#one1 span{
+	background-image: url('../img/ico_01.jpg');
+	background-repeat:no-repeat;
+	background-position: 90px center;
+}
+/**/
+li#one2 span{
+	background-image: url('../img/ico_02.jpg');
+	background-repeat:no-repeat;
+	background-position: 90px center;
+}
+li#one3 span{
+	background-image: url('../img/ico_03.jpg');
+	background-repeat:no-repeat;
+	background-position: 90px center;
+}
+
+li.tit_bj_left{
+	width:12px;
+	background-image: url('../img/tit01_left.jpg');
+	background-repeat:no-repeat;
+	background-position: left top;
+}
+
+
+.lib_Menubox li.hover,li#one1.hover,li#one2.hover,li#one3.hover{
+	padding:0px;
+	width:300px;
+	color:#333;
+	background-image: url('../img/tit01_hover.jpg');
+	background-repeat:no-repeat;
+	background-position: center top;
+}
+.lib_Contentbox{
+	width: 100%;
+	border: 1px solid #C0C0C0;
+	clear: both;
+	margin: 0 auto;
+	border-top: none;
+	height: 281px;
+	text-align: center;
+	padding-top:6px;
+	padding-bottom:6px;
+	background-color:#fff;
+
+}
+
+/*内容区*/
+.text_div{
+	width:98%;
+	height:auto;
+	display:block;
+	overflow:hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
